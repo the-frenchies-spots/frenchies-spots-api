@@ -2,6 +2,16 @@
   "version": 2,
   "installCommand": "pnpm install && npx prisma generate",
   "buildCommand": "npx prisma generate && nest build",
+  "env": {
+    "SOCKET_PORT_URL": "8001",
+    "DATABASE_URL": "mongodb+srv://hello-traveler:bEfqNhDRMDSvHaYI@hello-traveler.1ej6xyp.mongodb.net/nestDbTest",
+    "SHADOW_DATABASE_URL": "mongodb+srv://hello-traveler:bEfqNhDRMDSvHaYI@hello-traveler.1ej6xyp.mongodb.net/nestDbTest",
+    "ACCESS_TOKEN_SECRET": "f367dea2-c016-406d-be70-4ae54b0af1e5",
+    "REFRESH_TOKEN_SECRET": "69592bfb-66aa-42b6-a4f4-1afbcb914c15",
+    "CLOUDINARY_API_SECRET": "QtzBAxwtdLDjdnhmYMZ-2woyd0M",
+    "CLOUDINARY_API_KEY": "915112182266425",
+    "STRIPE_SECRET_KEY": "sk_test_51NpuviCXSy25JVoLtdHEKzeAnG7uuWtq5WzyIW7Lzj19kHHUVaSRPSJAPHPZ5s7YersELCyZOleyN3Px6vxixJdL00lz4YIIFa"
+  },
   "builds": [
     {
       "src": "src/main.ts",
