@@ -45,3 +45,5 @@ $ pnpm run start:dev
 # production mode
 $ pnpm run start:prod
 ```
+
+"generate": "gqlg --schemaFilePath ../../apps/frenchies-spots-api/src/schema.gql --destDirPath ./src/\_gql_request_generated --depthLimit 5"
