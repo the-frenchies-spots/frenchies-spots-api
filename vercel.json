@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build",
+  "buildCommand": "npx prisma generate && nest build",
   "builds": [
     {
       "src": "src/main.ts",
