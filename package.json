@@ -2,7 +2,7 @@
   "name": "frenchies-spots-api",
   "version": "1.0.0",
   "engines": {
-    "node": "v18.16.1"
+    "node": "v18.17.1"
   },
   "description": "",
   "author": "",
@@ -10,7 +10,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "generate": "prisma generate",
-    "postinstall": "pnpm generate",
+    "postinstall": "yarn generate",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
