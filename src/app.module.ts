@@ -22,9 +22,8 @@ import { PictureModule } from './module/picture.module';
     ConfigModule.forRoot({ isGlobal: true }),
     GraphQLModule.forRoot({
       driver: ApolloDriver,
-      
-      autoSchemaFile: true,
-      playground: false,
+      autoSchemaFile: process.env.NODE_ENV === 'production' ? true : join(process.cwd(), 'src/schema.gql'),
+      playground:  process.env.NODE_ENV === 'production' ? false : true,
       sortSchema: true,
       // cors: {
       //   credentials: true,
