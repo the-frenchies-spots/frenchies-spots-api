@@ -25,8 +25,8 @@ import { ChatModule } from './module/chat.module';
       driver: ApolloDriver,
       //autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       autoSchemaFile: true,
-      //playground: false,
-      playground: true,
+      playground: false,
+      //playground: true,
       sortSchema: true,
       // cors: {
       //   credentials: true,
