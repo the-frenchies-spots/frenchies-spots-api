@@ -34,4 +34,21 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# local env files
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# turbo
+.turbo
+
+# yarn
+yarn.lock
+
+# npm
+package-lock.json
+
+# pnpm
+pnpm-lock.yaml
