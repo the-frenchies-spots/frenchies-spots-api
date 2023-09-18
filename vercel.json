@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "installCommand": "pnpm install && npx prisma generate",
-  "buildCommand": "npx prisma generate && nest build",
+
   "env": {
     "SOCKET_PORT_URL": "8001",
     "DATABASE_URL": "mongodb+srv://hello-traveler:bEfqNhDRMDSvHaYI@hello-traveler.1ej6xyp.mongodb.net/nestDbTest",
@@ -12,7 +11,15 @@
     "CLOUDINARY_API_KEY": "915112182266425",
     "STRIPE_SECRET_KEY": "sk_test_51NpuviCXSy25JVoLtdHEKzeAnG7uuWtq5WzyIW7Lzj19kHHUVaSRPSJAPHPZ5s7YersELCyZOleyN3Px6vxixJdL00lz4YIIFa"
   },
-
+  "builds": [
+    {
+      "installCommand": "pnpm install && npx prisma generate",
+      "buildCommand": "npx prisma generate && nest build",
+      "src": "src/main.ts",
+      "use": "@vercel/node",
+      "config": { "usePM": "pnpm" }
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
