@@ -16,6 +16,7 @@ import { ProfileModule } from './module/profile.module';
 import { SocketModule } from './module/socket.module';
 import { ContactModule } from './module/contact.module';
 import { PictureModule } from './module/picture.module';
+import { ChatModule } from './module/chat.module';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { PictureModule } from './module/picture.module';
     RatingModule,
     FavoriteModule,
     SocketModule,
+    ChatModule,
     ContactModule,
     PictureModule,
   ],
