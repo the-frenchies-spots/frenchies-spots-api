@@ -8,6 +8,8 @@ import { CurrentProfileId } from '../decorator/currentProfileId.decorator.';
 
 import { InserChatInput } from '../dto/input/chat/insert-chat.input';
 import { CurrentUserId } from '../decorator/currentUserId.decorator';
+import { SendChatMessageInput } from '../dto/input/chat/send-chat-message.input';
+import { ChatMessageEntity } from '../entity/chat-message.entity';
 
 @Resolver(() => ChatEntity)
 export class ChatResolver {
@@ -35,5 +37,13 @@ export class ChatResolver {
     @CurrentProfileId() profileId: string,
   ): Promise<ChatEntity> {
     return this.chatBusiness.insertChat(profileId, inserChatInput);
+  }
+
+  @UseGuards(RefreshTokenGuard)
+  @Mutation(() => ChatMessageEntity)
+  sendChatMessage(
+    @Args('sendChatMessageInput') sendChatMessageInput: SendChatMessageInput,
+  ): Promise<ChatMessageEntity> {
+    return this.chatBusiness.sendMessage(sendChatMessageInput);
   }
 }
