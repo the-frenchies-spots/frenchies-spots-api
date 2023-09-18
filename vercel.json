@@ -1,6 +1,7 @@
 {
   "version": 2,
-
+  "installCommand": "pnpm install && npx prisma generate",
+  "buildCommand": "npx prisma generate && nest build",
   "env": {
     "SOCKET_PORT_URL": "8001",
     "DATABASE_URL": "mongodb+srv://hello-traveler:bEfqNhDRMDSvHaYI@hello-traveler.1ej6xyp.mongodb.net/nestDbTest",
@@ -13,8 +14,6 @@
   },
   "builds": [
     {
-      "installCommand": "pnpm install && npx prisma generate",
-      "buildCommand": "npx prisma generate && nest build",
       "src": "src/main.ts",
       "use": "@vercel/node",
       "config": { "usePM": "pnpm" }
