@@ -45,10 +45,10 @@ lerna-debug.log*
 .turbo
 
 # yarn
-yarn.lock
+#yarn.lock
 
 # npm
-package-lock.json
+#package-lock.json
 
 # pnpm
 #pnpm-lock.yaml
