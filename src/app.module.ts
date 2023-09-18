@@ -16,17 +16,14 @@ import { ProfileModule } from './module/profile.module';
 import { SocketModule } from './module/socket.module';
 import { ContactModule } from './module/contact.module';
 import { PictureModule } from './module/picture.module';
-import { ChatModule } from './module/chat.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     GraphQLModule.forRoot({
       driver: ApolloDriver,
-      //autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       autoSchemaFile: true,
       playground: false,
-      //playground: true,
       sortSchema: true,
       // cors: {
       //   credentials: true,
@@ -42,7 +39,6 @@ import { ChatModule } from './module/chat.module';
     RatingModule,
     FavoriteModule,
     SocketModule,
-    ChatModule,
     ContactModule,
     PictureModule,
   ],
