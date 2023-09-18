@@ -9,7 +9,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "postinstall": "echo ====== TEST ===== && pnpm install && prisma generate",
+    "postinstall": "pnpm install && npx prisma generate",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
